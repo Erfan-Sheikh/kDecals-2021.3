@@ -1,4 +1,5 @@
 # fixed some errors for 2021 versions also merged layermask fix
+## in order to use this first add kpooling using the description below. after kpooling added move it from packages folder into your assets folder and change the name to "com.kink3d.pooling" (remove the extra numbers at the end. also download this repo as a zip and add it into your assets folder and no place else.
 # kDecals
 ### Projection Decals for Unity's Universal Render Pipeline.
 

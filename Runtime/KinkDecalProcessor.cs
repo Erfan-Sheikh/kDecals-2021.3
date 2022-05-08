@@ -7,14 +7,14 @@ namespace kTools.Decals
     /// <summary>
     /// kPooling Processor for Decals.
     /// </summary>
-    public sealed class DecalProcessor : Processor<Decal>
+    public sealed class KinkDecalProcessor : Processor<Decal>
     {
 #region Fields
         Dictionary<object, Transform> m_Containers;
 #endregion
 
 #region Constructors
-        public DecalProcessor()
+        public KinkDecalProcessor()
         {
             // Set data
             m_Containers = new Dictionary<object, Transform>();

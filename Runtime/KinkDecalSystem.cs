@@ -7,14 +7,14 @@ namespace kTools.Decals
     /// <summary>
     /// Static system for creating and managing Decals.
     /// </summary>
-    public static class DecalSystem
+    public static class KinkDecalSystem
     {
 #region Fields
         static readonly List<Decal> m_Decals;
 #endregion
 
 #region Constructors
-        static DecalSystem()
+        static KinkDecalSystem()
         {
             m_Decals = new List<Decal>();
         }

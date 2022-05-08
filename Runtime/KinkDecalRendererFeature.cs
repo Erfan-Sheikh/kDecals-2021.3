@@ -2,18 +2,18 @@
 
 namespace kTools.Decals
 {
-    sealed class DecalRendererFeature : ScriptableRendererFeature
+    sealed class KinkDecalRendererFeature : ScriptableRendererFeature
     {
 #region Fields
-        static DecalRendererFeature s_Instance;
-        readonly DecalRenderPass m_RenderPass;
+        static KinkDecalRendererFeature s_Instance;
+        readonly KinkDecalRenderPass m_RenderPass;
 #endregion
 
 #region Constructors
-        public DecalRendererFeature()
+        public KinkDecalRendererFeature()
         {
             s_Instance = this;
-            m_RenderPass = new DecalRenderPass();
+            m_RenderPass = new KinkDecalRenderPass();
         }
 #endregion
 

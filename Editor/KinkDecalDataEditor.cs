@@ -7,7 +7,7 @@ namespace kTools.Decals.Editor
     using Editor = UnityEditor.Editor;
 
     [CustomEditor(typeof(DecalData)), CanEditMultipleObjects]
-    sealed class DecalDataEditor : Editor
+    sealed class KinkDecalDataEditor : Editor
     {
 #region Structs
         struct Styles
@@ -175,8 +175,8 @@ namespace kTools.Decals.Editor
 
             // Layer Mask
             EditorGUI.BeginChangeCheck();
-            LayerMask tempMask = EditorGUILayout.MaskField(Styles.LayerMask, (LayerMask)m_LayerMaskProp.intValue, InternalEditorUtility.layers);
-            if(EditorGUI.EndChangeCheck())
+            LayerMask tempMask = EditorGUILayout.MaskField(Styles.LayerMask, InternalEditorUtility.LayerMaskToConcatenatedLayersMask((LayerMask)m_LayerMaskProp.intValue), InternalEditorUtility.layers);
+            tempMask = InternalEditorUtility.ConcatenatedLayersMaskToLayerMask(tempMask);            if(EditorGUI.EndChangeCheck())
             {
                 m_LayerMaskProp.intValue = (int)tempMask;
             }

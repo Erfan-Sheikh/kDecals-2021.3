@@ -39,9 +39,9 @@ namespace kTools.Decals.Editor.Tests
         public void SetUp()
         {
             // Ensure Pools are set up
-            if(!DecalSystem.HasDecalPool(decalDataPooled))
+            if(!KinkDecalSystem.HasDecalPool(decalDataPooled))
             {
-                DecalSystem.CreateDecalPool(decalDataPooled);
+                KinkDecalSystem.CreateDecalPool(decalDataPooled);
             }
         }
 #endregion
@@ -51,7 +51,7 @@ namespace kTools.Decals.Editor.Tests
         public void CanCreateDecalPool()
         {
             // Execution
-            var hasPool = DecalSystem.HasDecalPool(decalDataPooled);
+            var hasPool = KinkDecalSystem.HasDecalPool(decalDataPooled);
 
             // Result
             Assert.IsTrue(hasPool);
@@ -62,8 +62,8 @@ namespace kTools.Decals.Editor.Tests
         public void CanDestroyDecalPool()
         {
             // Execution
-            DecalSystem.DestroyDecalPool(decalDataPooled);
-            var hasPool = DecalSystem.HasDecalPool(decalDataPooled);
+            KinkDecalSystem.DestroyDecalPool(decalDataPooled);
+            var hasPool = KinkDecalSystem.HasDecalPool(decalDataPooled);
 
             // Result
             Assert.IsFalse(hasPool);
@@ -74,7 +74,7 @@ namespace kTools.Decals.Editor.Tests
         public void CanGetDecal()
         {
             // Execution
-            var decal = DecalSystem.GetDecal(decalData);
+            var decal = KinkDecalSystem.GetDecal(decalData);
             var hasPool = PoolingSystem.HasPool<DecalData>(decalData);
 
             // Result
@@ -87,8 +87,8 @@ namespace kTools.Decals.Editor.Tests
         public void CanGetDecalPooled()
         {
             // Execution
-            var hasPool = DecalSystem.HasDecalPool(decalDataPooled);
-            var decal = DecalSystem.GetDecal(decalDataPooled);
+            var hasPool = KinkDecalSystem.HasDecalPool(decalDataPooled);
+            var decal = KinkDecalSystem.GetDecal(decalDataPooled);
 
             // Result
             Assert.IsTrue(hasPool);
@@ -100,9 +100,9 @@ namespace kTools.Decals.Editor.Tests
         public void CanRemoveDecal()
         {
             // Execution
-            var decal = DecalSystem.GetDecal(decalData);
+            var decal = KinkDecalSystem.GetDecal(decalData);
             var obj = decal.gameObject;
-            DecalSystem.RemoveDecal(decal);
+            KinkDecalSystem.RemoveDecal(decal);
 
             // Result
             LogAssert.NoUnexpectedReceived();
@@ -112,8 +112,8 @@ namespace kTools.Decals.Editor.Tests
         public void CanRemoveDecalPooled()
         {
             // Execution
-            var decal = DecalSystem.GetDecal(decalDataPooled);
-            DecalSystem.RemoveDecal(decal);
+            var decal = KinkDecalSystem.GetDecal(decalDataPooled);
+            KinkDecalSystem.RemoveDecal(decal);
             var isRemoved = !decal.gameObject.activeSelf;
 
             // Result

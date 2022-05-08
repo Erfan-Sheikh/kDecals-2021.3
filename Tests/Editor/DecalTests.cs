@@ -28,9 +28,9 @@ namespace kTools.Decals.Editor.Tests
         public void SetUp()
         {
             // Ensure Pools are set up
-            if(!DecalSystem.HasDecalPool(decalDataPooled))
+            if(!KinkDecalSystem.HasDecalPool(decalDataPooled))
             {
-                DecalSystem.CreateDecalPool(decalDataPooled);
+                KinkDecalSystem.CreateDecalPool(decalDataPooled);
             }
         }
 #endregion
@@ -40,8 +40,8 @@ namespace kTools.Decals.Editor.Tests
         public void CanRegisterDecal()
         {
             // Execution
-            var decal = DecalSystem.GetDecal(decalDataPooled);
-            var registered = DecalSystem.decals.Contains(decal);
+            var decal = KinkDecalSystem.GetDecal(decalDataPooled);
+            var registered = KinkDecalSystem.decals.Contains(decal);
 
             // Result
             Assert.IsTrue(registered);
@@ -52,9 +52,9 @@ namespace kTools.Decals.Editor.Tests
         public void CanUnregisterDecal()
         {
             // Execution
-            var decal = DecalSystem.GetDecal(decalDataPooled);
-            DecalSystem.RemoveDecal(decal);
-            var registered = DecalSystem.decals.Contains(decal);
+            var decal = KinkDecalSystem.GetDecal(decalDataPooled);
+            KinkDecalSystem.RemoveDecal(decal);
+            var registered = KinkDecalSystem.decals.Contains(decal);
 
             // Result
             Assert.IsFalse(registered);
@@ -68,7 +68,7 @@ namespace kTools.Decals.Editor.Tests
             var positon = Vector3.one;
             var direction = new Vector3(0, 0, 1);
             var scale = Vector2.one;
-            var decal = DecalSystem.GetDecal(decalDataPooled, positon, direction, scale);
+            var decal = KinkDecalSystem.GetDecal(decalDataPooled, positon, direction, scale);
             var forward = Vector3.zero;
 
             // Result

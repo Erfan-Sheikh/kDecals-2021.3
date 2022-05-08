@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 
 namespace kTools.Decals
 {
-    sealed class DecalRenderPass : ScriptableRenderPass
+    sealed class KinkDecalRenderPass : ScriptableRenderPass
     {
 #region Fields
         const float kErrorMargin = 0.1f;
@@ -19,7 +19,7 @@ namespace kTools.Decals
 #endregion
 
 #region Constructors
-        public DecalRenderPass()
+        public KinkDecalRenderPass()
         {
             // Set data
             renderPassEvent = RenderPassEvent.AfterRenderingTransparents;
@@ -36,7 +36,7 @@ namespace kTools.Decals
                 ExecuteCommand(context, cmd);
 
                 // Sorting
-                var decals = DecalSystem.decals.OrderBy(x => x.decalData.sortingOrder);
+                var decals = KinkDecalSystem.decals.OrderBy(x => x.decalData.sortingOrder);
 
                 foreach(var decal in decals)
                 {

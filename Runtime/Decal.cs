@@ -48,13 +48,13 @@ namespace kTools.Decals
         void OnEnable()
         {
             // Registration
-            DecalSystem.RegisterDecal(this);
+            KinkDecalSystem.RegisterDecal(this);
         }
 
         void OnDisable()
         {
             // Registration
-            DecalSystem.UnregisterDecal(this);
+            KinkDecalSystem.UnregisterDecal(this);
         }
 
         void Update()

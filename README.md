@@ -1,3 +1,4 @@
+# fixed some errors for 2021 versions also merged layermask fix
 # kDecals
 ### Projection Decals for Unity's Universal Render Pipeline.
 

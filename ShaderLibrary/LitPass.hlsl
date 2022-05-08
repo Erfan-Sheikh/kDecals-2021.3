@@ -124,6 +124,18 @@ Varyings LitPassVertex(Attributes input)
     return output;
 }
 
+// struct kSurfaceData
+// {
+//     half3 albedo;
+//     half3 specular;
+//     half  metallic;
+//     half  smoothness;
+//     half3 normalTS;
+//     half3 emission;
+//     half  occlusion;
+//     half  alpha;
+// };
+
 // -------------------------------------
 // Fragment
 half4 LitPassFragment(Varyings input) : SV_Target
@@ -131,7 +143,7 @@ half4 LitPassFragment(Varyings input) : SV_Target
     UNITY_SETUP_INSTANCE_ID(input);
     UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(input);
 
-    SurfaceData surfaceData;
+    kSurfaceData surfaceData;
     InitializeStandardLitSurfaceData(input.positionPS, surfaceData);
 
     InputData inputData;

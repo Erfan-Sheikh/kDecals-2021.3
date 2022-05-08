@@ -3,7 +3,7 @@
 
 // -------------------------------------
 // Includes
-#include "Packages/com.kink3d.decals/ShaderLibrary/Core.hlsl"
+#include "Assets/com.kink3d.decals/ShaderLibrary/Core.hlsl"
 
 // -------------------------------------
 // Structs

@@ -8,7 +8,7 @@
 #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/Packing.hlsl"
 #include "Packages/com.unity.render-pipelines.core/ShaderLibrary/CommonMaterial.hlsl"
-#include "Packages/com.kink3d.decals/ShaderLibrary/Core.hlsl"
+#include "Assets/com.kink3d.decals/ShaderLibrary/Core.hlsl"
 
 // -------------------------------------
 // Uniforms
@@ -130,7 +130,7 @@ half3 SampleEmission(float4 positionPS)
 
 // -------------------------------------
 // SurfaceData
-struct SurfaceData
+struct kSurfaceData
 {
     half3 albedo;
     half3 specular;
@@ -142,7 +142,7 @@ struct SurfaceData
     half  alpha;
 };
 
-inline void InitializeStandardLitSurfaceData(float4 positionPS, out SurfaceData outSurfaceData)
+inline void InitializeStandardLitSurfaceData(float4 positionPS, out kSurfaceData outSurfaceData)
 {
     half4 albedoAlpha = SAMPLE_DECAL2D(_BaseMap, positionPS);
     outSurfaceData.alpha = Alpha(albedoAlpha.a, _BaseColor, _Cutoff);

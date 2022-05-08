@@ -81,8 +81,8 @@
 
 			// -------------------------------------
             // Includes
-			#include "Packages/com.kink3d.decals/ShaderLibrary/LitInput.hlsl"
-			#include "Packages/com.kink3d.decals/ShaderLibrary/LitPass.hlsl"
+			#include "Assets/com.kink3d.decals/ShaderLibrary/LitInput.hlsl"
+			#include "Assets/com.kink3d.decals/ShaderLibrary/LitPass.hlsl"
 
 			ENDHLSL
 		}

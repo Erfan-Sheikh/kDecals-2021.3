@@ -45,7 +45,7 @@
 			// -------------------------------------
             // Includes
 			#include "Packages/com.unity.render-pipelines.universal/Shaders/UnlitInput.hlsl"
-			#include "Packages/com.kink3d.decals/ShaderLibrary/UnlitPass.hlsl"
+			#include "Assets/com.kink3d.decals/ShaderLibrary/UnlitPass.hlsl"
 			
 			ENDHLSL
 		}

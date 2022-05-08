@@ -1,5 +1,5 @@
 # fixed some errors for 2021 versions also merged layermask fix
-## in order to use this first add kpooling using the description below. after kpooling added move it from packages folder into your assets folder and change the name to "com.kink3d.pooling" (remove the extra numbers at the end. also download this repo and add it into your assets folder and no place else.
+## in order to use this first add kpooling using the description below. after kpooling added move it from packages folder into your assets folder and change the name to "com.kink3d.pooling" (remove the extra numbers at the end. now that you have kpooling in your assets folder remove the one in packages folder by removing the line from manifest. also download this repo and add it into your assets folder and no place else.
 both kpooling and kdecal should be in assets folder with the names of "com.kink3d.pooling" and "com.kink3d.decals"
 # kDecals
 ### Projection Decals for Unity's Universal Render Pipeline.
